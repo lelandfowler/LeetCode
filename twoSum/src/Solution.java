@@ -1,19 +1,15 @@
-import java.util.Arrays;
+import java.util.HashMap;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] result = null;
-        int array_size = (int) Arrays.stream(nums).count();
-        for(int i = 0; i < array_size; i++) {
-            int current_element = nums[i];
-            int pair_to_match = target - current_element;
-            for (int j = i +1; j< array_size; j++){
-                int possible_match = nums[j];
-                if (possible_match == pair_to_match) {
-                    result = new int[]{i, j};
-                    break;
-                }
+        HashMap<Integer, Integer> hash = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            int pair_match = target - nums[i];
+            if (hash.containsKey(pair_match)){
+                return new int[]{hash.get(pair_match),i};
             }
+            hash.put(nums[i], i);
         }
-        return result;
+        return null;
     }
 }
