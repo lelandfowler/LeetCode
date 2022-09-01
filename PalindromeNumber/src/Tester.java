@@ -14,7 +14,6 @@ class Tester {
         boolean expected_output_4 = true;
         boolean expected_output_5 = true;
         boolean expected_output_6 = true;
-        boolean expected_output_7 = false;
 
 
         int[] inputs = new int[]{

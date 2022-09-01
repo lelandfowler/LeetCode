@@ -6,23 +6,6 @@ class Solution {
     public Solution() {
     }
 
-//    public boolean isPalindrome(int x) {
-//        String asString = String.valueOf(x);
-//        BigInteger as_Big = new BigInteger(asString);
-//        BigInteger working_value = new BigInteger(asString);
-//        int length = asString.length();
-//        BigInteger reverse = new BigInteger("0");
-//        BigInteger base = new BigInteger("10");
-//        while(working_value.compareTo(BigInteger.valueOf(1))>=0){
-//            BigInteger mod = working_value.remainder(base);
-//            BigInteger power = new BigInteger(String.valueOf((int) Math.pow(10,length-1)));
-//            reverse =  reverse.add(mod.multiply(power));
-//            working_value= working_value.divide(base);
-//            length-=1;
-//        }
-//        return reverse.compareTo(as_Big)==0;
-//    }
-
     public boolean isPalindrome(int x) {
 //        case #1: 0-9
         if(x >= 0 && x <= 9) return true;
