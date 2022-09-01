@@ -6,15 +6,18 @@ import java.util.*;
 
 class Solution {
     public int romanToInt(String s) {
-        int numeral_as_number = 0;
-        for(int i = 0; i < s.length(); i++){
-            int value = romanNuminary(s.charAt(i));
+        if(s.length()<=15){
+            int numeral_as_number = 0;
             int last_value = 1000;
-            if(value>last_value){
+            for(int i = 0; i < s.length(); i++){
+                int value = romanNuminary(s.charAt(i));
+                if(value>last_value) numeral_as_number-=(2*last_value);
                 numeral_as_number+=value;
+                last_value = value;
             }
+            return numeral_as_number;
         }
-        return numeral_as_number;
+        return -1;
     }
     private int romanNuminary ( char c){
         switch (c) {
