@@ -1,13 +1,13 @@
 import java.util.Arrays;
 
-class a_test {
+class run_tests {
     int[] number_array;
     int target;
     int[] correct_result;
     int[] calculated_result;
     boolean test_status;
 
-    a_test(int[] number_array, int target, int[] correct_result){
+    run_tests(int[] number_array, int target, int[] correct_result){
         this.number_array = number_array;
         this.target = target;
         this.correct_result = correct_result;
@@ -32,7 +32,7 @@ public class Test {
         int[] correct_result_1 = {0,1};
         int[] calculated_results_1 = {};
 
-        a_test case_1 = new a_test(num_array_1, target_1, correct_result_1);
+        run_tests case_1 = new run_tests(num_array_1, target_1, correct_result_1);
         calculated_results_1 = case_1.calculate_solution();
         System.out.println("Calculated result: " + Arrays.toString(calculated_results_1));
         case_1.check_solution();
@@ -40,12 +40,13 @@ public class Test {
 
 //        ___________________________________________________________________________ //
 
+
         int[] num_array_2 = {3,2,4};
         int target_2 = 6;
         int[] correct_result_2 = {1,2};
         int[] calculated_results_2 = {};
 
-        a_test case_2 = new a_test(num_array_2, target_2, correct_result_2);
+        run_tests case_2 = new run_tests(num_array_2, target_2, correct_result_2);
         calculated_results_2 = case_2.calculate_solution();
         System.out.println("Calculated result: " + Arrays.toString(calculated_results_2));
         case_2.check_solution();
